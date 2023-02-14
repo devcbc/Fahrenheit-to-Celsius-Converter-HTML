@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuario a versao do html que deve ser renderizada -->
+<html lang="pt-br">
+  <head>
+    <tittle></tittle>
+    <meta charset="utf-8">
+    <meta name="author" content="Cauã">
+    <meta name="decription" content="Fahrenheit to Celsius">
+    <meta name="keywords" content="html5, tecnology">
+
+    <link rel="stylesheet" href="css/estilo.css">
+
+<html>
+<head>
+	<title>Fahrenheit to Celsius Converter</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+		form {
+			margin: 50px auto;
+			width: 300px;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		input[type="number"] {
+			padding: 10px;
+			width: 100%;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0,0,0,0.2);
+			margin-bottom: 20px;
+			box-sizing: border-box;
+		}
+		button {
+			padding: 10px 20px;
+			background-color: #008CBA;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0,0,0,0.2);
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #006080;
+		}
+		.result {
+			margin-top: 20px;
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Fahrenheit to Celsius Converter</h1>
+	<form>
+		<label>Enter the temperature in Fahrenheit:</label>
+		<input type="number" id="fahrenheit" placeholder="Fahrenheit" min="-459.67" required>
+		<button type="button" onclick="convert()">Convert</button>
+		<div class="result" id="result"></div>
+	</form>
+	<script>
+		function convert() {
+			var fahrenheit = document.getElementById("fahrenheit").value;
+			var celsius = (fahrenheit - 32) * 5 / 9;
+			document.getElementById("result").innerHTML = fahrenheit + " &#8457; = " + celsius.toFixed(2) + " &#8451;";
+		}
+	</script>
+</body>
+</html>
